@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivals of India by State</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7cabe0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3)
+        }
+
+        .state-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .state-list li {
+            flex: 1 1 45%;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .state-list li a {
+            display: block;
+            padding: 15px;
+            background-color: #fafafa;
+            color: #333;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transform: scale(1);
+        }
+
+        .state-list li a:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            color: #007bff;
+            transition: all 0.4s ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            font-size: medium;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .state-list li a:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .flip-container {
+            perspective: 1000px;
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+        }
+
+        .flip-card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-container:hover .flip-card {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background: url("indian-mithais-premium-quality-assorted-1000x1000.jpg") no-repeat center/cover;
+        }
+
+        .flip-card-back {
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Festivals of India by State</h1>
+        <div class="flip-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"></div>
+                    <div class="flip-card-back">
+                        <h2>Indian Festivals</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="state-list">
+            <li><a href="maharashtra.html">Maharashtra<span class="tooltip-text">Ganesh Chaturthi, Diwali, Makar Sankranti</span></a></li>
+            <li><a href="tamil_nadu.html">Tamil Nadu<span class="tooltip-text">Pongal, Diwali, Karthigai Deepam</span></a></li>
+            <li><a href="karnataka.html">Karnataka<span class="tooltip-text">Dussehra, Ugadi, Makar Sankranti</span></a></li>
+            <li><a href="west_bengal.html">West Bengal<span class="tooltip-text">Durga Puja, Kali Puja, Poila Baisakh</span></a></li>
+            <li><a href="#">Kerala<span class="tooltip-text">Onam, Vishu, Thrissur Pooram</span></a></li>
+            <li><a href="#">Uttar Pradesh<span class="tooltip-text">Holi, Diwali, Janmashtami</span></a></li>
+            <li><a href="#">Gujarat<span class="tooltip-text">Navratri, Uttarayan, Rath Yatra</span></a></li>
+            <li><a href="#">Rajasthan<span class="tooltip-text">Gangaur, Teej, Makar Sankranti</span></a></li>
+            <li><a href="#">Punjab<span class="tooltip-text">Lohri, Baisakhi, Guru Nanak Jayanti</span></a></li>
+            <li><a href="#">Madhya Pradesh<span class="tooltip-text">Holi, Diwali, Bhagoria Festival</span></a></li>
+            <li><a href="#">Bihar<span class="tooltip-text">Chhath Puja, Makar Sankranti, Durga Puja</span></a></li>
+            <li><a href="#">Odisha<span class="tooltip-text">Rath Yatra, Durga Puja, Raja Parba</span></a></li>
+            <li><a href="#">Assam<span class="tooltip-text">Bihu, Durga Puja, Ambubachi Mela</span></a></li>
+            <li><a href="#">Andhra Pradesh<span class="tooltip-text">Sankranti, Ugadi, Vinayaka Chaturthi</span></a></li>
+            <li><a href="#">Haryana<span class="tooltip-text">Teej, Lohri, Baisakhi</span></a></li>
+            <li><a href="#">Himachal Pradesh<span class="tooltip-text">Kullu Dussehra, Lohri, Baisakhi</span></a></li>
+            <li><a href="#">Uttarakhand<span class="tooltip-text">Kumbh Mela, Holi, Diwali</span></a></li>
+            <li><a href="#">Jammu and Kashmir<span class="tooltip-text">Hemis Festival, Navratri, Eid</span></a></li>
+            <li><a href="#">Goa<span class="tooltip-text">Carnival, Shigmo, Christmas</span></a></li>
+            <li><a href="#">Tripura<span class="tooltip-text">Durga Puja, Garia Puja, Kharchi Puja</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>
